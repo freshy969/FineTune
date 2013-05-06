@@ -66,7 +66,7 @@ function showPlaying(name, url) {
     timer = window.setTimeout($('#nowplaying')
         .html('Now playing: <a href="' + url + '" target="_new">' + name + '</a><div style="position:absolute; right: 0px; top: 0px;display: block;width: 50px;height: 100%;background-image: -webkit-linear-gradient(right, #F5F5F4, rgba(245, 245, 245, 0.67), rgba(245, 245, 245, 0));"></div>')
         .fadeIn(300), 3000);
-    tweetHref = "https://twitter.com/intent/tweet?url=http://kenlauguico.com/ft/?q="+search.replace(/\s/g,'%2B')+"&text=%23NowPlaying " + name;
+    tweetHref = "https://twitter.com/intent/tweet?url=http://finetune.me/?q="+search.replace(/\s/g,'%2B')+"&text=%23NowPlaying " + name;
     $('.custom-tweet-button a').attr('href', tweetHref);
 }
 
@@ -87,3 +87,8 @@ $(document).ready(function () {
 });
 
 var iframeElement, iframeElementID, widget1, widget2;
+
+$(document).on('keypress', function (e) {
+    if (!$("*:focus").is("textarea, input"))
+        $('#songsearch').focus();
+});
