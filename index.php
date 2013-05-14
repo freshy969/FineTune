@@ -119,6 +119,23 @@
               padding: 0px 3px 0 20px;
               margin-top: -2px;
             }
+            
+            /* BOOKMARKLET */
+            .bookmarklet {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 200px;
+                text-align: right;
+            }
+            .bookmarklet small {
+                visibility: hidden;
+            }
+            
+            .bookmarklet:hover small {
+                visibility: visible;
+            }
+            
         </style>
     </head>
     <body>
@@ -143,6 +160,12 @@
         </div>
         <div class="front-bg">
             <img class="front-img" alt="">
+        </div>
+        <div class="bookmarklet">
+            <a class="btn btn-mini" href='javascript:(function(){var t=window.getSelection?window.getSelection().toString():document.selection.createRange().text;window.open("http://finetune.me/?q="+encodeURIComponent(t),"_blank");})()'>FineTune Now</a>
+            <p>
+                <small>Drag this to your bookmarks bar to create the FineTune bookmarklet!<br>(Just make sure text is selected before you use it!)</small>
+            </p>
         </div>
         <div id="player" style="position: absolute; top: -300%; left: 0;"></div>
         <script src="http://connect.soundcloud.com/sdk.js"></script>
