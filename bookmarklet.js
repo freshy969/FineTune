@@ -1,0 +1,1 @@
+javascript:(function(){var t=window.getSelection?window.getSelection().toString():document.selection.createRange().text;window.open("http://finetune.me/?q="+encodeURIComponent(t),"_blank");})()
